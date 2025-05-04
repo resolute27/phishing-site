@@ -60,7 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelector(".left-section > p").style.display = "block";
 		document.getElementById("email").value = "";
 		document.getElementById("password").value = "";
+		document.getElementById("password").type = "password";
 		document.getElementById("show-password").checked = false;
+
 
 		const emailInput = document.getElementById("email");
 		emailInput.focus();
