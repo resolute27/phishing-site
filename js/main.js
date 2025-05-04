@@ -58,6 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("step2").style.display = "none";
 		document.querySelector(".left-section h1").textContent = "登入";
 		document.querySelector(".left-section > p").style.display = "block";
+		document.getElementById("email").value = "";
+		document.getElementById("password").value = "";
+		document.getElementById("show-password").checked = false;
 
 		const emailInput = document.getElementById("email");
 		emailInput.focus();
