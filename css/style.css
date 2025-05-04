@@ -1,0 +1,402 @@
+:root {
+	--primary-color: #0b57d0;
+	--gray: #444746;
+	--lightgray: #e4e4e4;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f0f4f9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	font-size: 14px;
+	color: var(--primary-color);
+}
+
+a:active {
+	color: var(--primary-color);
+}
+
+span {
+	font-size: 14px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 1040px;
+	padding: 36px;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 28px;
+}
+
+.logo {
+	margin-bottom: 24px;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	column-gap: 55px;
+	width: 100%;
+}
+
+.main-form {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+
+/********************* left section *********************/
+
+.left-section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.left-section h1 {
+	font-size: 36px;
+	margin: 0 0 10px;
+	font-weight: 400;
+}
+
+.left-section p {
+	font-size: 16px;
+}
+
+
+.user-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	column-gap: 10px;
+	margin-top: 6px;
+	padding: 2px;
+	width: fit-content;
+	border: 1px solid var(--gray);
+	border-radius: 28px;
+	cursor: pointer;
+}
+
+.user-info:hover {
+	background-color: #f2f2f2;
+}
+
+
+/********************* right section *********************/
+#step1 {
+	width: 100%;
+}
+
+.right-section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 100%;
+}
+
+.input-field-group {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.input-field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 60px;
+	position: relative;
+	margin-bottom: 6px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+	padding: 16px;
+	border: 1px solid var(--gray);
+	border-radius: 4px;
+	font-size: 18px;
+	width: 100%;
+	outline: none;
+}
+
+.input-field label {
+	position: absolute;
+	top: 14px;
+	left: 16px;
+	color: --var(--gray);
+	font-size: 16px;
+	transition: transform 0.3s ease;
+	user-select: none;
+	cursor: text;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+	border: 2px solid var(--primary-color);
+}
+
+input[type="email"]:focus~label,
+input[type="email"]:not(:placeholder-shown)~label,
+input[type="password"]:focus~label,
+input[type="password"]:not(:placeholder-shown)~label,
+input[type="text"]:focus~label,
+input[type="text"]:not(:placeholder-shown)~label {
+	top: 6px;
+	left: 10px;
+	padding: 0 5px;
+	font-size: 14px;
+	background-color: white;
+	transform: translateY(-16px);
+}
+
+input[type="email"]:focus~label,
+input[type="password"]:focus~label,
+input[type="text"]:focus~label {
+	color: var(--primary-color);
+}
+
+.input-field-description {
+	margin-top: 32px;
+}
+
+#step2 {
+	width: 100%;
+}
+
+input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin: 0 10px;
+	accent-color: var(--primary-color);
+	cursor: pointer;
+	user-select: none;
+}
+
+#step2 .label-show-password {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+#step2 .label-show-password label {
+	font-size: 14px;
+	cursor: pointer;
+	user-select: none;
+}
+
+#step2 .input-field-group {
+	margin-top: 34px;
+	margin-bottom: 16px;
+}
+
+/********************* actions *********************/
+button {
+	width: 90px;
+	height: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+	border: none;
+	font-size: 14px;
+	user-select: none;
+}
+
+.actions {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 32px;
+}
+
+.button_group {
+	display: flex;
+	column-gap: 20px;
+}
+
+.create-account {
+	background-color: white;
+	color: var(--primary-color);
+}
+
+.next-step {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+/********************** footer *********************/
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1020px;
+	font-size: 12px;
+	user-select: none;
+}
+
+.lang-options {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	column-gap: 120px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.1s ease;
+}
+
+.lang-options:hover {
+	background-color: var(--lightgray);
+}
+
+.footer ul {
+	display: flex;
+}
+
+.footer ul li {
+	list-style: none;
+	font-size: 12px;
+	padding: 8px;
+	margin: 16px 4px 16px 0;
+	border-radius: 8px;
+	transition: background-color 0.1s ease;
+}
+
+.footer ul li:hover {
+	background-color: var(--lightgray);
+}
+
+.footer ul li a {
+	color: var(--gray);
+	font-size: 12px;
+}
+
+/********************** animation *********************/
+
+.body-loader {
+	position: relative;
+}
+
+.body-loader::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.4);
+	z-index: 999;
+}
+
+.loader {
+	position: relative;
+}
+
+.loader::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 96%;
+	height: 4px;
+	--c: no-repeat linear-gradient(var(--primary-color) 0 0);
+	background: var(--c), var(--c);
+	background-size: 60% 100%;
+	animation: l16 1.5s 0.6 forwards;
+}
+
+@keyframes l16 {
+	0% {
+		background-position: -150% 0, -150% 0;
+	}
+
+	66% {
+		background-position: 250% 0, -150% 0;
+	}
+
+	100% {
+		background-position: 250% 0, 250% 0;
+	}
+}
+
+
+/********************* media queries *********************/
+
+@media (max-width: 1040px) {
+	.card {
+		padding: 24px;
+		margin: 0 min(100px, 80px);
+		max-width: 480px;
+	}
+
+	.main-form {
+		flex-direction: column;
+	}
+
+	.left-section {
+		margin-bottom: 32px;
+	}
+
+	.button_group {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.create-account {
+		text-align: start;
+	}
+
+	.input-field-group {
+		margin-bottom: 20px;
+	}
+
+	.actions {
+		margin-top: 40px;
+	}
+
+	.footer {
+		max-width: 470px;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 0;
+		margin: 0;
+		justify-content: space-between;
+		background-color: white;
+	}
+
+	.card {
+		max-width: 600px;
+		width: 100%;
+		margin: 0;
+	}
+
+	.left-section h1 {
+		font-size: 32px;
+	}
+
+	.footer {
+		max-width: 600px;
+		width: 100%;
+		padding: 0 15px;
+	}
+}

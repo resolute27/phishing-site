@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/google_favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>登入 - Google 帳戶</title>
+</head>
+
+<body>
+  <div class="card">
+    <img class="logo" src="img/logo.svg" alt="google logo" width="48" height="48" />
+    <div class="main-content">
+      <div class="main-form">
+        <div class="left-section">
+          <h1>登入</h1>
+          <p>使用你的 Google 帳戶</p>
+          <div class="user-info" style="display: none;">
+            <img src="img/profile.svg" alt="profile" width="24" height="24">
+            <p></p>
+            <img src="img/dropdown-triangle.svg" alt="triangle" width="24" height="24">
+          </div>
+        </div>
+        <div class="right-section">
+          <div id="step1">
+            <div class="input-field-group">
+              <div class="input-field">
+                <input type="email" id="email" placeholder="" />
+                <label for="email">電子郵件地址或電話號碼</label>
+              </div>
+              <a href="#">忘記電子郵件地址？</a>
+            </div>
+            <div class="input-field-description">
+              <span>如果這不是你的電腦，請使用訪客模式以私密方式登入。</span>
+              <a href="#"> 進一步瞭解如何使用訪客模式</a>
+            </div>
+          </div>
+          <div id="step2" style="display: none;">
+            <div class="input-field-group">
+              <div class="input-field">
+                <input type="password" id="password" placeholder="" />
+                <label for="password">輸入你的密碼</label>
+              </div>
+              <div class="label-show-password">
+                <input type="checkbox" id="show-password" onclick="togglePassword()" />
+                <label for="show-password">顯示密碼</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="button_group">
+          <button class="create-account">建立帳戶</button>
+          <button class="next-step" onclick="nextStep()">下一步</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="lang-options">
+      <p>繁體中文</p>
+      <img src="img/dropdown-triangle.svg" alt="triangle" width="16" height="16">
+    </div>
+    <ul>
+      <li><a href="#">說明</a></li>
+      <li><a href="#">隱私權設定</a></li>
+      <li><a href="#">條款</a></li>
+    </ul>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
