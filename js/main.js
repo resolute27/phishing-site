@@ -49,6 +49,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
+	const passwordInput = document.getElementById("password");
+
+	passwordInput.addEventListener("keydown", function (event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			nextStep();
+		}
+	});
+
 	const userInfo = document.querySelector(".user-info");
 	userInfo.addEventListener("click", async function () {
 		await runLoader();

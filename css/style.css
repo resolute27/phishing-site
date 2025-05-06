@@ -38,7 +38,7 @@ span {
 .card {
 	display: flex;
 	flex-direction: column;
-	width: 1040px;
+	width: clamp(480px, 80vw, 1040px);
 	padding: 36px;
 	margin: 0 auto;
 	background-color: white;
@@ -247,7 +247,7 @@ button {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 1020px;
+	width: clamp(480px, 80vw, 1020px);
 	font-size: 12px;
 	user-select: none;
 }
@@ -313,8 +313,8 @@ button {
 	content: "";
 	position: absolute;
 	top: 0;
-	left: 20px;
-	width: 96%;
+	left: 5%;
+	width: 90%;
 	height: 4px;
 	--c: no-repeat linear-gradient(var(--primary-color) 0 0);
 	background: var(--c), var(--c);
@@ -342,7 +342,6 @@ button {
 @media (max-width: 1040px) {
 	.card {
 		padding: 24px;
-		margin: 0 min(100px, 80px);
 		max-width: 480px;
 	}
 
